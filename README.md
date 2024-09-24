@@ -1,7 +1,7 @@
 # System_BarberShop
 
 
-A aplicação GUI para gerenciamento de clientes e serviços de uma barbearia.
+Uma aplicação GUI para gerenciamento de clientes e serviços de uma barbearia.
 
 **Funcionalidades**
 
