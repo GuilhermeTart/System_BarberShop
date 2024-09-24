@@ -12,7 +12,7 @@ Uma aplicação GUI para gerenciamento de clientes e serviços de uma barbearia.
 * Gerar planilhas de clientes e serviços
 * Calcular ganhos por mês e ano
 * Excluir serviços cadastrados
-* Gestão de faturamento por cliente e mensal
+* Gestão de faturamento por cliente mensal
 
 ![image](https://github.com/user-attachments/assets/403d180a-b629-4446-8b4d-3a63b9db64d4)
 
