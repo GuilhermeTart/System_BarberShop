@@ -6,7 +6,7 @@ from openpyxl import Workbook
 from openpyxl.styles import Alignment, Font
 from openpyxl.utils import get_column_letter
 from threading import Timer 
-from browser import document
+
 
 class Cliente:
     def __init__(self, nome, telefone):
@@ -422,14 +422,7 @@ class BarbeariaApp:
         page.theme_mode = ft.ThemeMode.DARK
         page.bgcolor = ft.colors.BLUE_GREY_900
         page.padding = 5
-        
-        # Adicione a imagem de fundo
-        document.body.style.backgroundImage = r"C:\Users\pc\Music\Barber\venv\luxa.org-opacity-changed-FULLHD.jpg"
-        document.body.style.backgroundSize = "cover"
-        document.body.style.backgroundRepeat = "no-repeat"
-        document.body.style.backgroundAttachment = "fixed"
-        
-        
+
         self.titulo = ft.Text("", size=32, color=ft.colors.WHITE, text_align=ft.TextAlign.CENTER)
         self.nome_input = ft.TextField(label="Nome do Cliente", expand=True, color=ft.colors.WHITE)
         self.telefone_input = ft.TextField(label="Telefone do Cliente", expand=True, on_change=self.formatar_telefone_input, color=ft.colors.WHITE)
@@ -535,29 +528,29 @@ class BarbeariaApp:
         )
 
         # Adicionando a imagem de fundo
-        # def on_resize(e):
-        #     background_image.width = page.width
-        #     background_image.height = page.height
-        #     background_image.update()
+        def on_resize(e):
+            background_image.width = page.width
+            background_image.height = page.height
+            background_image.update()
 
-        # background_image = ft.Image(
-        #     src="luxa.org-opacity-changed-FULLHD.jpg",
-        #     fit=ft.ImageFit.COVER,
-        #     width=page.width,
-        #     height=page.height
-        # )
+        background_image = ft.Image(
+            src="luxa.org-opacity-changed-FULLHD.jpg",
+            fit=ft.ImageFit.COVER,
+            width=page.width,
+            height=page.height
+        )
 
-        # background_container = ft.Container(
-        #     content=ft.Stack(
-        #         [
-        #             background_image,
-        #             conteudo_principal
-        #         ]
-        #     ), expand=True
-        # )
+        background_container = ft.Container(
+            content=ft.Stack(
+                [
+                    background_image,
+                    conteudo_principal
+                ]
+            ), expand=True
+        )
 
-        # page.on_resize = on_resize
-        # page.add(background_container)
+        page.on_resize = on_resize
+        page.add(background_container)
 
     def formatar_telefone_input(self, e):
         self.telefone_input.value = self.formatar_telefone(self.telefone_input.value)
